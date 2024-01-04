@@ -35,6 +35,7 @@ public class SystemResource {
 	@Timed(name = "getPropertiesTime", description = "Time needed to get the properties of a system")
 	@Counted(absolute = true, description = "Number of times the properties of a systems is requested")
 	public Response getProperties() {
+		System.out.println("DID THIS PRINT");
 		if (!systemConfig.isInMaintenance()) {
 			return Response.ok(System.getProperties()).build();
 		} else {
