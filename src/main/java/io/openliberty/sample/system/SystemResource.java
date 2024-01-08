@@ -30,7 +30,6 @@ public class SystemResource {
 	@Inject
 	SystemConfig systemConfig;
 
-	@GET
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
 	@Timed(name = "getPropertiesTime", description = "Time needed to get the properties of a system")
