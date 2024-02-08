@@ -35,7 +35,7 @@ public class SystemResource {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Timed(name = "getPropertiesTime", description = "Time needed to get the properties of a system")
-	@Counted(absolute = true, description = "Number of times the properties of a systems is requested")
+	@Counted(absolute = true, description = "1Number of times the properties of a systems is requested")
 	public Response getProperties() {
 		if (!systemConfig.isInMaintenance()) {
 			return Response.ok(System.getProperties()).build();
